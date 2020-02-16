@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP - Upload</title>
+</head>
+<body>
+    
+    <form action="upload.php" method="POST" enctype="multipart/form-data">   
+        <input type="file" name="fayl" multiple>
+        <button name="gnd" value="Upload">Ok</button>
+    </form>
+
+</body>
+</html>
+
+<!--
+if(!in_array($type,$Tipler)){
+    echo "Tipsiz";
+    exit;
+}
+
+if($olcu > 1000){
+    echo "Olcu";
+    exit;
+}
+
+$ad = $_FILES["fayl"]["name"];
+$tmp = $_FILES["fayl"]["tmp_name"];
+$type = $_FILES["fayl"]["type"];
+$olcu = $_FILES["fayl"]["size"];
+
+$yeri = "file/".date("d-m-Y-H-i-s-").rand(1000,9999)."-".$ad;
+
+if(move_uploaded_file($tmp,$yeri)){
+    echo "Uğurlu!";
+}
+else {
+    echo "Nc";
+}
+-->
